@@ -1,4 +1,4 @@
-// Fetch Fantasy Books
+
 async function fetchFantasyBooks() {
     try {
         const response = await fetch('https://openlibrary.org/search.json?q=fantasy&limit=6');
@@ -9,7 +9,7 @@ async function fetchFantasyBooks() {
     }
 }
 
-// Fetch Science Books
+
 async function fetchScienceBooks() {
     try {
         const response = await fetch('https://openlibrary.org/search.json?q=science&limit=6');
@@ -20,10 +20,10 @@ async function fetchScienceBooks() {
     }
 }
 
-// Display books in the specified container
+
 function displayBooks(books, containerId) {
     const container = document.getElementById(containerId);
-    container.innerHTML = ''; // Clear loading message
+    container.innerHTML = ''; 
     
     books.forEach(book => {
         const bookCard = `
@@ -38,6 +38,6 @@ function displayBooks(books, containerId) {
     });
 }
 
-// Call both functions when page loads
+
 fetchFantasyBooks();
 fetchScienceBooks();
